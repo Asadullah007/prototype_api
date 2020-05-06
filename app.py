@@ -5,9 +5,8 @@ app = Flask(__name__)
 
 # /api/virufy -> all data will be posted here and we will return the response
 
-@app.route('/app', methods=['POST'])
+@app.route('/api/virufy', methods=['POST'])
 def post():
-    print(request.form)
     age = request.form.get('age')
     gender = request.form.get('gender')
     smoker = request.form.get('smoker')
