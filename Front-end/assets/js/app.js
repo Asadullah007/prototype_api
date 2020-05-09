@@ -26,7 +26,10 @@ function startRecording() {
 		https://addpipe.com/blog/audio-constraints-getusermedia/
 	*/
 
-  var constraints = { audio: true, video: false };
+  var constraints = {
+    audio: true,
+    video: false
+  };
 
   /*
     	Disable the record button until we get a success or fail from getUserMedia()
@@ -70,7 +73,9 @@ function startRecording() {
 			Create the Recorder object and configure to record mono sound (1 channel)
 			Recording 2 channels  will double the file size
 		*/
-      rec = new Recorder(input, { numChannels: 1 });
+      rec = new Recorder(input, {
+        numChannels: 1
+      });
 
       //start the recording process
       rec.record();
